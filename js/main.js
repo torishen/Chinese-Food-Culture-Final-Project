@@ -275,46 +275,61 @@ function openDrawer(id) {
     const d = PORTRAITS[id];
     if (!d)
         return;
+    // Merge in Chinese data if language is zh
+    const isZh = window.currentLang === 'zh';
+    const zh = (window.PORTRAITS_ZH && window.PORTRAITS_ZH[id]) || {};
+    const city     = isZh ? (zh.city || d.city) : d.city;
+    const years    = isZh ? (zh.years || d.years) : d.years;
+    const stats    = isZh ? (zh.stats || d.stats) : d.stats;
+    const body     = isZh ? (zh.body || d.body) : d.body;
+    const dishDesc = isZh ? (zh.dishDesc || d.dishDesc) : d.dishDesc;
+    const recipe   = isZh ? (zh.recipe || d.recipe) : d.recipe;
+    const tags     = isZh ? (zh.tags || d.tags) : d.tags;
+    const eyebrowLabel = isZh ? '人物肖像' : 'Portrait';
+    const dishSuffix   = isZh ? '——那道无法忘怀的菜' : '— the dish they cannot stop missing';
+    const kitchenLabel = isZh ? '厨房' : 'Kitchen';
+    const dishLabel    = isZh ? '那道菜' : 'The Dish';
     let galleryHtml = '';
     if (d.photos && d.photos.length) {
-        galleryHtml = `<div class="dr-sec"><div class="dr-sec-label">Kitchen</div><div class="gallery-strip">`;
+        galleryHtml = `<div class="dr-sec"><div class="dr-sec-label">${kitchenLabel}</div><div class="gallery-strip">`;
         d.photos.forEach(ph => {
-            galleryHtml += `<div class="gallery-thumb" onclick="openLightboxSrc('photos/${ph}','${d.city} · kitchen')">
-        <img src="photos/${ph}" alt="${d.city} kitchen" onerror="this.parentElement.innerHTML='<div class=\\'gallery-thumb-ph\\'>[ photos/${ph} ]</div>'">
+            galleryHtml += `<div class="gallery-thumb" onclick="openLightboxSrc('photos/${ph}','${city} · kitchen')">
+        <img src="photos/${ph}" alt="${city} kitchen" onerror="this.parentElement.innerHTML='<div class=\'gallery-thumb-ph\'>[ photos/${ph} ]</div>'">
       </div>`;
         });
         galleryHtml += `</div></div>`;
     }
     let recipeHtml = '';
-    if (d.recipe) {
+    if (recipe) {
         recipeHtml = `<div class="recipe-list">`;
-        d.recipe.forEach(s => recipeHtml += `<div class="recipe-step">${s}</div>`);
+        recipe.forEach(s => recipeHtml += `<div class="recipe-step">${s}</div>`);
         recipeHtml += `</div>`;
     }
     let tagsHtml = '';
-    if (d.tags) {
+    if (tags) {
         tagsHtml = `<div class="dr-tags">`;
-        d.tags.forEach(t => tagsHtml += `<span class="dr-tag">${t}</span>`);
+        tags.forEach(t => tagsHtml += `<span class="dr-tag">${t}</span>`);
         tagsHtml += `</div>`;
     }
     document.getElementById('drawer-body').innerHTML = `
-    <div class="dr-eyebrow">Portrait</div>
-    <div class="dr-city">${d.city} · ${d.years}</div>
+    <div class="dr-eyebrow">${eyebrowLabel}</div>
+    <div class="dr-city">${city} · ${years}</div>
     <div class="dr-dish">${d.dish}</div>
-    <div class="dr-dish-en">${d.dishEn} — the dish they cannot stop missing</div>
-    <div class="dr-stats">${d.stats.map(s => `<div class="dr-stat"><div class="n">${s.n}</div><div class="l">${s.l}</div></div>`).join('')}</div>
+    <div class="dr-dish-en">${d.dishEn} ${dishSuffix}</div>
+    <div class="dr-stats">${stats.map(s => `<div class="dr-stat"><div class="n">${s.n}</div><div class="l">${s.l}</div></div>`).join('')}</div>
     <div class="dr-cn">${d.cn}</div>
-    <div class="dr-body">${d.body}</div>
+    <div class="dr-body">${body}</div>
     ${galleryHtml}
     <div class="dr-sec">
-      <div class="dr-sec-label">The Dish</div>
-      <div class="dr-dish-desc">${d.dishDesc}</div>
+      <div class="dr-sec-label">${dishLabel}</div>
+      <div class="dr-dish-desc">${dishDesc}</div>
       ${recipeHtml}
     </div>
     ${tagsHtml}
   `;
     document.getElementById('drawer').classList.add('open');
 }
+
 function closeDrawer() { document.getElementById('drawer').classList.remove('open'); }
 document.addEventListener('click', e => {
     const dr = document.getElementById('drawer');

@@ -559,3 +559,26 @@ section{min-height:100vh;position:relative;}
   .lp-right { flex-direction: row; justify-content: flex-start; }
   .listen-inner { padding: 0 24px; }
 }
+
+/* ── LANGUAGE TOGGLE ── */
+#lang-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 8500;
+  background: transparent;
+  border: 1px solid rgba(196,74,42,0.5);
+  color: var(--ember);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+#lang-toggle-btn:hover {
+  background: var(--ember);
+  color: var(--ink);
+  border-color: var(--ember);
+}

@@ -18,17 +18,17 @@
 <div id="audio-modal">
   <div id="audio-modal-box">
     <div class="modal-cn">聼</div>
-    <div class="modal-title">Before you read — listen</div>
-    <div class="modal-body">This web documentary has a soundtrack.<br>Eight voices, recorded in Mandarin.<br><em>Let it run underneath as you explore.</em></div>
+    <div class="modal-title" data-i18n="modal-title">Before you read — listen</div>
+    <div class="modal-body" data-i18n-html="modal-body">This web documentary has a soundtrack.<br>Eight voices, recorded in Mandarin.<br><em>Let it run underneath as you explore.</em></div>
     <div class="modal-waveform">
       <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
     </div>
     <button class="modal-play-btn" onclick="modalPlay()">
       <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
     </button>
-    <div class="modal-play-label">Play the voices</div>
+    <div class="modal-play-label" data-i18n="modal-play-label">Play the voices</div>
     <div id="modal-status" style="display:none;font-family:Space Mono,monospace;font-size:9px;color:#c44a2a;margin-bottom:12px;padding:8px 12px;border:1px solid rgba(196,74,42,0.3);letter-spacing:0.06em;"></div>
-  <button class="modal-skip" onclick="dismissModal()">Continue in silence→</button>
+  <button class="modal-skip" data-i18n="modal-skip" onclick="dismissModal()">Continue in silence→</button>
   </div>
 </div>
 
@@ -38,7 +38,7 @@
     <svg id="bar-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
   </button>
   <div class="bar-waveform"><span></span><span></span><span></span><span></span><span></span></div>
-  <div id="audio-label">吃 · Eight voices · Mandarin</div>
+  <div id="audio-label" data-i18n="audio-label">吃 · Eight voices · Mandarin</div>
   <div id="prog-wrap" onclick="seekAudio(event)"><div id="prog-fill"></div></div>
   <div id="audio-time">—</div>
   <div id="chapter-ind">Cover</div>
@@ -55,11 +55,11 @@
 ══════════════════════════════════════ -->
 <section id="cover" data-chapter="Cover">
   <div class="cover-cn">吃</div>
-  <div class="cover-en">Eating Alone Together</div>
+  <div class="cover-en" data-i18n="cover-en">Eating Alone Together</div>
   <div class="cover-rule"></div>
-  <div class="cover-q">For Chinese international students in the U.S., how does food function as a way of maintaining cultural identity and navigating belonging?</div>
+  <div class="cover-q" data-i18n="cover-q">For Chinese international students in the U.S., how does food function as a way of maintaining cultural identity and navigating belonging?</div>
   <div class="cover-scroll" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">
-    Scroll to begin
+    <span data-i18n="cover-scroll">Scroll to begin</span>
     <div class="scroll-ln"></div>
   </div>
 </section>
@@ -69,16 +69,16 @@
 ══════════════════════════════════════ -->
 <section id="intro" data-chapter="Premise">
   <div class="intro-inner">
-    <div class="eyebrow reveal">The Project</div>
-    <div class="pull reveal rd1">
+    <div class="eyebrow reveal" data-i18n="eyebrow-project">The Project</div>
+    <div class="pull reveal rd1" data-i18n-html="pull-rd1">
       When you cross a border,<br>your body doesn't forget.<br>
       It keeps <em>reaching</em> for something.
     </div>
     <div class="ibody reveal rd2">
-      <p>Eight Chinese international students. Eight universities across America — from Atlanta to Boston, Los Angeles to Ithaca. Eight kitchens photographed, eight voices recorded in Mandarin. The question was deceptively simple: <em>what do you eat?</em></p>
-      <p>What emerged was far more complicated than appetite. Food is where identity gets negotiated daily — quietly, practically, hungrily. Every grocery run is a small act of self-preservation. Every meal cooked alone is a rehearsal of who you were, and a decision about who you're becoming.</p>
-      <p>This is not a story about restaurants. It is a story about the space between the stove and the self.</p>
-      <p style="margin-top:28px;font-size:14px;font-style:normal;color:var(--muted);font-family:'Space Mono',monospace;letter-spacing:0.05em;">The people interviewed will be known here only by the city where they are and the dish they cannot stop missing.</p>
+      <p data-i18n-html="intro-p1">Eight Chinese international students. Eight universities across America — from Atlanta to Boston, Los Angeles to Ithaca. Eight kitchens photographed, eight voices recorded in Mandarin. The question was deceptively simple: <em>what do you eat?</em></p>
+      <p data-i18n-html="intro-p2">What emerged was far more complicated than appetite. Food is where identity gets negotiated daily — quietly, practically, hungrily. Every grocery run is a small act of self-preservation. Every meal cooked alone is a rehearsal of who you were, and a decision about who you're becoming.</p>
+      <p data-i18n="intro-p3">This is not a story about restaurants. It is a story about the space between the stove and the self.</p>
+      <p style="margin-top:28px;font-size:14px;font-style:normal;color:var(--muted);font-family:'Space Mono',monospace;letter-spacing:0.05em;" data-i18n="intro-p4">The people interviewed will be known here only by the city where they are and the dish they cannot stop missing.</p>
     </div>
   </div>
 </section>
@@ -86,8 +86,8 @@
 <!-- DIVIDER -->
 <div class="dq reveal">
   <div class="dq-cn">念</div>
-  <div class="dq-text">"Eating is the most important thing in the world. Especially when you're sick — the body still wants Chinese food. That instinct doesn't negotiate."</div>
-  <div class="dq-cite">Boston · MIT · 5 years in the US</div>
+  <div class="dq-text" data-i18n="dq1-text">"Eating is the most important thing in the world. Especially when you're sick — the body still wants Chinese food. That instinct doesn't negotiate."</div>
+  <div class="dq-cite" data-i18n="dq1-cite">Boston · MIT · 5 years in the US</div>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -95,9 +95,9 @@
 ══════════════════════════════════════ -->
 <section id="eight" data-chapter="The Eight">
   <div class="eight-hdr">
-    <div class="eyebrow reveal">Introducing</div>
-    <div class="eight-title reveal rd1">Eight Cities. Eight Dishes. Eight Kitchens.</div>
-    <div class="eight-sub reveal rd2">Click to explore.</div>
+    <div class="eyebrow reveal" data-i18n="eyebrow-introducing">Introducing</div>
+    <div class="eight-title reveal rd1" data-i18n="eight-title">Eight Cities. Eight Dishes. Eight Kitchens.</div>
+    <div class="eight-sub reveal rd2" data-i18n="eight-sub">Click to explore.</div>
   </div>
 
   <div class="portrait-grid">
@@ -106,15 +106,15 @@
     <div class="portrait-card reveal" onclick="openDrawer('la')">
       <!-- PHOTO SLOT 1: replace with <img class="p-photo" src="photos/la-kitchen.jpg" alt="Kitchen in Los Angeles"> -->
       <div class="p-photo-placeholder"><div class="p-cn-bg">川</div></div>
-      <div class="p-open">Open →</div>
+      <div class="p-open" data-i18n="p-open">Open →</div>
       <div class="p-bottom">
-        <div class="p-city">Los Angeles · 5 years</div>
+        <div class="p-city" data-i18n="p-city-la">Los Angeles · 5 years</div>
         <div class="p-dish">肥肠豆腐鱼</div>
-        <div class="p-dish-en">Intestine & Tofu Fish</div>
-        <div class="p-quote">"Eating together — that's already the happiest experience, even if what we made could barely be called Chinese food."</div>
+        <div class="p-dish-en" data-i18n="p-dish-en-la">Intestine & Tofu Fish</div>
+        <div class="p-quote" data-i18n="p-quote-la">"Eating together — that's already the happiest experience, even if what we made could barely be called Chinese food."</div>
         <div class="p-stats">
-          <div class="p-stat"><div class="n">21</div><div class="l">meals/wk</div></div>
-          <div class="p-stat"><div class="n">75%</div><div class="l">Chinese</div></div>
+          <div class="p-stat"><div class="n">21</div><div class="l" data-i18n="stat-meals">meals/wk</div></div>
+          <div class="p-stat"><div class="n">75%</div><div class="l" data-i18n="stat-chinese">Chinese</div></div>
         </div>
       </div>
       <div class="p-accent"></div>
@@ -124,15 +124,15 @@
     <div class="portrait-card reveal rd1" onclick="openDrawer('boston')">
       <!-- PHOTO SLOT 2: <img class="p-photo" src="photos/boston-kitchen.jpg" alt="Kitchen in Boston"> -->
       <div class="p-photo-placeholder"><div class="p-cn-bg">杭</div></div>
-      <div class="p-open">Open →</div>
+      <div class="p-open" data-i18n="p-open">Open →</div>
       <div class="p-bottom">
-        <div class="p-city">Boston · 5 years</div>
+        <div class="p-city" data-i18n="p-city-boston">Boston · 5 years</div>
         <div class="p-dish">糖醋排骨</div>
-        <div class="p-dish-en">Sweet & Sour Pork Ribs</div>
-        <div class="p-quote">"When sick, the body still wants Chinese food. That instinct doesn't negotiate."</div>
+        <div class="p-dish-en" data-i18n="p-dish-en-boston">Sweet & Sour Pork Ribs</div>
+        <div class="p-quote" data-i18n="p-quote-boston">"When sick, the body still wants Chinese food. That instinct doesn't negotiate."</div>
         <div class="p-stats">
-          <div class="p-stat"><div class="n">~20</div><div class="l">meals/wk</div></div>
-          <div class="p-stat"><div class="n">48%</div><div class="l">Chinese</div></div>
+          <div class="p-stat"><div class="n">~20</div><div class="l" data-i18n="stat-meals">meals/wk</div></div>
+          <div class="p-stat"><div class="n">48%</div><div class="l" data-i18n="stat-chinese">Chinese</div></div>
         </div>
       </div>
       <div class="p-accent"></div>
@@ -142,15 +142,15 @@
     <div class="portrait-card reveal rd2" onclick="openDrawer('atlanta-e')">
       <!-- PHOTO SLOT 3: <img class="p-photo" src="photos/atlanta-e-kitchen.jpg" alt="Kitchen in Atlanta"> -->
       <div class="p-photo-placeholder"><div class="p-cn-bg">面</div></div>
-      <div class="p-open">Open →</div>
+      <div class="p-open" data-i18n="p-open">Open →</div>
       <div class="p-bottom">
-        <div class="p-city">Atlanta · 9 years</div>
+        <div class="p-city" data-i18n="p-city-atlanta-e">Atlanta · 9 years</div>
         <div class="p-dish">兰州拉面</div>
-        <div class="p-dish-en">Lanzhou Pulled Noodles</div>
-        <div class="p-quote">"Half my life has been here. But my tastes haven't changed."</div>
+        <div class="p-dish-en" data-i18n="p-dish-en-atlanta-e">Lanzhou Pulled Noodles</div>
+        <div class="p-quote" data-i18n="p-quote-atlanta-e">"Half my life has been here. But my tastes haven't changed."</div>
         <div class="p-stats">
-          <div class="p-stat"><div class="n">15</div><div class="l">meals/wk</div></div>
-          <div class="p-stat"><div class="n">33%</div><div class="l">Chinese</div></div>
+          <div class="p-stat"><div class="n">15</div><div class="l" data-i18n="stat-meals">meals/wk</div></div>
+          <div class="p-stat"><div class="n">33%</div><div class="l" data-i18n="stat-chinese">Chinese</div></div>
         </div>
       </div>
       <div class="p-accent"></div>
@@ -160,15 +160,15 @@
     <div class="portrait-card reveal rd3" onclick="openDrawer('atlanta-gt1')">
       <!-- PHOTO SLOT 4: <img class="p-photo" src="photos/atlanta-gt1-kitchen.jpg" alt="Kitchen in Atlanta"> -->
       <div class="p-photo-placeholder"><div class="p-cn-bg">辣</div></div>
-      <div class="p-open">Open →</div>
+      <div class="p-open" data-i18n="p-open">Open →</div>
       <div class="p-bottom">
-        <div class="p-city">Atlanta · 1 year</div>
+        <div class="p-city" data-i18n="p-city-atlanta-gt1">Atlanta · 1 year</div>
         <div class="p-dish">潮汕牛肉煲</div>
-        <div class="p-dish-en">Chaoshan Beef Hot Pot</div>
-        <div class="p-quote">"Every meal is Chinese food. Every day I cook for myself."</div>
+        <div class="p-dish-en" data-i18n="p-dish-en-atlanta-gt1">Chaoshan Beef Hot Pot</div>
+        <div class="p-quote" data-i18n="p-quote-atlanta-gt1">"Every meal is Chinese food. Every day I cook for myself."</div>
         <div class="p-stats">
-          <div class="p-stat"><div class="n">14</div><div class="l">meals/wk</div></div>
-          <div class="p-stat"><div class="n">100%</div><div class="l">Chinese</div></div>
+          <div class="p-stat"><div class="n">14</div><div class="l" data-i18n="stat-meals">meals/wk</div></div>
+          <div class="p-stat"><div class="n">100%</div><div class="l" data-i18n="stat-chinese">Chinese</div></div>
         </div>
       </div>
       <div class="p-accent"></div>
@@ -178,15 +178,15 @@
     <div class="portrait-card reveal" onclick="openDrawer('ithaca')">
       <!-- PHOTO SLOT 5: <img class="p-photo" src="photos/ithaca-kitchen.jpg" alt="Kitchen in Ithaca"> -->
       <div class="p-photo-placeholder"><div class="p-cn-bg">聚</div></div>
-      <div class="p-open">Open →</div>
+      <div class="p-open" data-i18n="p-open">Open →</div>
       <div class="p-bottom">
-        <div class="p-city">Ithaca · 6 years</div>
+        <div class="p-city" data-i18n="p-city-ithaca">Ithaca · 6 years</div>
         <div class="p-dish">夫妻肺片</div>
-        <div class="p-dish-en">Husband & Wife Sliced Beef</div>
-        <div class="p-quote">"The happiest meal — not because it was great, but because we were all there."</div>
+        <div class="p-dish-en" data-i18n="p-dish-en-ithaca">Husband & Wife Sliced Beef</div>
+        <div class="p-quote" data-i18n="p-quote-ithaca">"The happiest meal — not because it was great, but because we were all there."</div>
         <div class="p-stats">
-          <div class="p-stat"><div class="n">14</div><div class="l">meals/wk</div></div>
-          <div class="p-stat"><div class="n">85%</div><div class="l">Chinese</div></div>
+          <div class="p-stat"><div class="n">14</div><div class="l" data-i18n="stat-meals">meals/wk</div></div>
+          <div class="p-stat"><div class="n">85%</div><div class="l" data-i18n="stat-chinese">Chinese</div></div>
         </div>
       </div>
       <div class="p-accent"></div>
@@ -196,15 +196,15 @@
     <div class="portrait-card reveal rd1" onclick="openDrawer('cville')">
       <!-- PHOTO SLOT 6: <img class="p-photo" src="photos/cville-kitchen.jpg" alt="Kitchen in Charlottesville"> -->
       <div class="p-photo-placeholder"><div class="p-cn-bg">凉</div></div>
-      <div class="p-open">Open →</div>
+      <div class="p-open" data-i18n="p-open">Open →</div>
       <div class="p-bottom">
-        <div class="p-city">Charlottesville · 5 years</div>
+        <div class="p-city" data-i18n="p-city-cville">Charlottesville · 5 years</div>
         <div class="p-dish">凉皮</div>
-        <div class="p-dish-en">Xi'an Cold Skin Noodles</div>
-        <div class="p-quote">"In Minnesota — no car, no delivery. That period was 痛苦. Real suffering."</div>
+        <div class="p-dish-en" data-i18n="p-dish-en-cville">Xi'an Cold Skin Noodles</div>
+        <div class="p-quote" data-i18n="p-quote-cville">"In Minnesota — no car, no delivery. That period was 痛苦. Real suffering."</div>
         <div class="p-stats">
-          <div class="p-stat"><div class="n">~10</div><div class="l">meals/wk</div></div>
-          <div class="p-stat"><div class="n">50%</div><div class="l">Chinese</div></div>
+          <div class="p-stat"><div class="n">~10</div><div class="l" data-i18n="stat-meals">meals/wk</div></div>
+          <div class="p-stat"><div class="n">50%</div><div class="l" data-i18n="stat-chinese">Chinese</div></div>
         </div>
       </div>
       <div class="p-accent"></div>
@@ -214,15 +214,15 @@
     <div class="portrait-card reveal rd2" onclick="openDrawer('atlanta-gt2')">
       <!-- PHOTO SLOT 7: <img class="p-photo" src="photos/atlanta-gt2-kitchen.jpg" alt="Kitchen in Atlanta"> -->
       <div class="p-photo-placeholder"><div class="p-cn-bg">炖</div></div>
-      <div class="p-open">Open →</div>
+      <div class="p-open" data-i18n="p-open">Open →</div>
       <div class="p-bottom">
-        <div class="p-city">Atlanta · 2 years</div>
+        <div class="p-city" data-i18n="p-city-atlanta-gt2">Atlanta · 2 years</div>
         <div class="p-dish">辣子鸡</div>
-        <div class="p-dish-en">Dry-Fried Chili Chicken</div>
-        <div class="p-quote">"When I've been eating 白人饭 too long, I cook. It's like recalibrating."</div>
+        <div class="p-dish-en" data-i18n="p-dish-en-atlanta-gt2">Dry-Fried Chili Chicken</div>
+        <div class="p-quote" data-i18n="p-quote-atlanta-gt2">"When I've been eating 白人饭 too long, I cook. It's like recalibrating."</div>
         <div class="p-stats">
-          <div class="p-stat"><div class="n">14</div><div class="l">meals/wk</div></div>
-          <div class="p-stat"><div class="n">47%</div><div class="l">Chinese</div></div>
+          <div class="p-stat"><div class="n">14</div><div class="l" data-i18n="stat-meals">meals/wk</div></div>
+          <div class="p-stat"><div class="n">47%</div><div class="l" data-i18n="stat-chinese">Chinese</div></div>
         </div>
       </div>
       <div class="p-accent"></div>
@@ -232,15 +232,15 @@
     <div class="portrait-card reveal rd3" onclick="openDrawer('atlanta-gt3')">
       <!-- PHOTO SLOT 8: <img class="p-photo" src="photos/atlanta-gt3-kitchen.jpg" alt="Kitchen in Atlanta"> -->
       <div class="p-photo-placeholder"><div class="p-cn-bg">安</div></div>
-      <div class="p-open">Open →</div>
+      <div class="p-open" data-i18n="p-open">Open →</div>
       <div class="p-bottom">
-        <div class="p-city">Atlanta · 5 years</div>
+        <div class="p-city" data-i18n="p-city-atlanta-gt3">Atlanta · 5 years</div>
         <div class="p-dish">臭桂鱼</div>
-        <div class="p-dish-en">Fermented Mandarin Fish</div>
-        <div class="p-quote">"Without familiar food, I feel like a guest everywhere — all day."</div>
+        <div class="p-dish-en" data-i18n="p-dish-en-atlanta-gt3">Fermented Mandarin Fish</div>
+        <div class="p-quote" data-i18n="p-quote-atlanta-gt3">"Without familiar food, I feel like a guest everywhere — all day."</div>
         <div class="p-stats">
-          <div class="p-stat"><div class="n">14</div><div class="l">meals/wk</div></div>
-          <div class="p-stat"><div class="n">82%</div><div class="l">Chinese</div></div>
+          <div class="p-stat"><div class="n">14</div><div class="l" data-i18n="stat-meals">meals/wk</div></div>
+          <div class="p-stat"><div class="n">82%</div><div class="l" data-i18n="stat-chinese">Chinese</div></div>
         </div>
       </div>
       <div class="p-accent"></div>
@@ -252,8 +252,8 @@
 <!-- DIVIDER -->
 <div class="dq reveal">
   <div class="dq-cn">归</div>
-  <div class="dq-text">"I had no car. No delivery. The Chinese food nearby couldn't satisfy my craving. That time was <em style="color:var(--ember);font-style:normal">痛苦</em> — real suffering."</div>
-  <div class="dq-cite">Charlottesville · formerly Minnesota · 5 years</div>
+  <div class="dq-text" data-i18n-html="dq2-text">"I had no car. No delivery. The Chinese food nearby couldn't satisfy my craving. That time was <em style="color:var(--ember);font-style:normal">痛苦</em> — real suffering."</div>
+  <div class="dq-cite" data-i18n="dq2-cite">Charlottesville · formerly Minnesota · 5 years</div>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -261,9 +261,9 @@
 ══════════════════════════════════════ -->
 <section id="gallery" data-chapter="Kitchens">
   <div class="gallery-hdr">
-    <div class="eyebrow reveal">The Kitchens</div>
-    <div class="gallery-title reveal rd1">Gallery of Food and Where They Come From.</div>
-    <div class="gallery-sub reveal rd2">The stove, the condiments, the bowls — the architecture of a life maintained.</div>
+    <div class="eyebrow reveal" data-i18n="eyebrow-kitchens">The Kitchens</div>
+    <div class="gallery-title reveal rd1" data-i18n="gallery-title">Gallery of Food and Where They Come From.</div>
+    <div class="gallery-sub reveal rd2" data-i18n="gallery-sub">The stove, the condiments, the bowls — the architecture of a life maintained.</div>
   </div>
 
   <div class="gallery-track-wrap">
@@ -281,13 +281,13 @@
       <img src="photos/la-01.jpg" alt="Los Angeles kitchen">
       <div class="gallery-item-ph"><div class="ph-cn">川</div><div class="ph-label">Los Angeles<br>la-01.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Los Angeles · kitchen</div>
+      <div class="gallery-item-caption" data-i18n="gc-la-01">Los Angeles · kitchen</div>
     </div>
     <div class="gallery-item narrow" data-caption="Los Angeles · condiments" onclick="openLightbox(this)">
       <img src="photos/la-02.jpg" alt="Los Angeles condiments">
       <div class="gallery-item-ph"><div class="ph-cn">料</div><div class="ph-label">Los Angeles<br>la-02.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Los Angeles · condiments</div>
+      <div class="gallery-item-caption" data-i18n="gc-la-02">Los Angeles · condiments</div>
     </div>
 
     <!-- Boston -->
@@ -295,13 +295,13 @@
       <img src="photos/bos-01.jpg" alt="Boston kitchen">
       <div class="gallery-item-ph"><div class="ph-cn">杭</div><div class="ph-label">Boston<br>bos-01.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Boston · kitchen</div>
+      <div class="gallery-item-caption" data-i18n="gc-bos-01">Boston · kitchen</div>
     </div>
     <div class="gallery-item" data-caption="Boston · pots and pans" onclick="openLightbox(this)">
       <img src="photos/bos-02.jpg" alt="Boston pots and pans">
       <div class="gallery-item-ph"><div class="ph-cn">锅</div><div class="ph-label">Boston<br>bos-02.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Boston · condiments</div>
+      <div class="gallery-item-caption" data-i18n="gc-bos-02">Boston · condiments</div>
     </div>
 
     <!-- Atlanta × 4 interviewees -->
@@ -309,37 +309,37 @@
       <img src="photos/atl-01.jpg" alt="Atlanta kitchen">
       <div class="gallery-item-ph"><div class="ph-cn">面</div><div class="ph-label">Atlanta<br>atl-01.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Atlanta · Home-cooked Food</div>
+      <div class="gallery-item-caption" data-i18n="gc-atl-01">Atlanta · Home-cooked Food</div>
     </div>
     <div class="gallery-item" data-caption="Atlanta · stove (1 year)" onclick="openLightbox(this)">
       <img src="photos/atl-02.jpg" alt="Atlanta stove">
       <div class="gallery-item-ph"><div class="ph-cn">灶</div><div class="ph-label">Atlanta<br>atl-02.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Atlanta · stove</div>
+      <div class="gallery-item-caption" data-i18n="gc-atl-02">Atlanta · stove</div>
     </div>
     <div class="gallery-item" data-caption="Atlanta · condiments (1 year)" onclick="openLightbox(this)">
       <img src="photos/atl-03.jpg" alt="Atlanta condiments">
       <div class="gallery-item-ph"><div class="ph-cn">辣</div><div class="ph-label">Atlanta<br>atl-03.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Atlanta · condiments</div>
+      <div class="gallery-item-caption" data-i18n="gc-atl-03">Atlanta · condiments</div>
     </div>
     <div class="gallery-item" data-caption="Atlanta · kitchen (2 years)" onclick="openLightbox(this)">
       <img src="photos/atl-04.jpg" alt="Atlanta kitchen">
       <div class="gallery-item-ph"><div class="ph-cn">炖</div><div class="ph-label">Atlanta<br>atl-04.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Atlanta · kitchen</div>
+      <div class="gallery-item-caption" data-i18n="gc-atl-04">Atlanta · kitchen</div>
     </div>
     <div class="gallery-item" data-caption="Atlanta · spice rack (5 years)" onclick="openLightbox(this)">
       <img src="photos/atl-05.jpg" alt="Atlanta spice rack">
       <div class="gallery-item-ph"><div class="ph-cn">香</div><div class="ph-label">Atlanta<br>atl-05.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Atlanta · spice rack</div>
+      <div class="gallery-item-caption" data-i18n="gc-atl-05">Atlanta · spice rack</div>
     </div>
     <div class="gallery-item" data-caption="Atlanta · delivery food" onclick="openLightbox(this)">
       <img src="photos/atl-06.jpg" alt="Atlanta delivery food">
       <div class="gallery-item-ph"><div class="ph-cn">送</div><div class="ph-label">Atlanta<br>atl-06.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Atlanta · 南北通 delivery</div>
+      <div class="gallery-item-caption" data-i18n="gc-atl-06">Atlanta · 南北通 delivery</div>
     </div>
 
     <!-- Ithaca -->
@@ -347,13 +347,13 @@
       <img src="photos/ith-01.jpg" alt="Ithaca kitchen">
       <div class="gallery-item-ph"><div class="ph-cn">聚</div><div class="ph-label">Ithaca<br>ith-01.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Ithaca · kitchen</div>
+      <div class="gallery-item-caption" data-i18n="gc-ith-01">Ithaca · kitchen</div>
     </div>
     <div class="gallery-item" data-caption="Ithaca · communal cooking" onclick="openLightbox(this)">
       <img src="photos/ith-02.jpg" alt="Ithaca communal cooking">
       <div class="gallery-item-ph"><div class="ph-cn">粉</div><div class="ph-label">Ithaca<br>ith-02.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Ithaca · cooked with care</div>
+      <div class="gallery-item-caption" data-i18n="gc-ith-02">Ithaca · cooked with care</div>
     </div>
 
     <!-- Charlottesville -->
@@ -361,13 +361,13 @@
       <img src="photos/cvl-01.jpg" alt="Charlottesville kitchen">
       <div class="gallery-item-ph"><div class="ph-cn">凉</div><div class="ph-label">Charlottesville<br>cvl-01.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Charlottesville · kitchen</div>
+      <div class="gallery-item-caption" data-i18n="gc-cvl-01">Charlottesville · kitchen</div>
     </div>
     <div class="gallery-item" data-caption="Charlottesville · pantry" onclick="openLightbox(this)">
       <img src="photos/cvl-02.jpg" alt="Charlottesville pantry">
       <div class="gallery-item-ph"><div class="ph-cn">储</div><div class="ph-label">Charlottesville<br>cvl-02.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Charlottesville · pantry</div>
+      <div class="gallery-item-caption" data-i18n="gc-cvl-02">Charlottesville · pantry</div>
     </div>
 
     <!-- Delivery food photos (shared) -->
@@ -375,19 +375,19 @@
       <img src="photos/delivery-01.jpg" alt="Delivery food">
       <div class="gallery-item-ph"><div class="ph-cn">外</div><div class="ph-label">Delivery<br>delivery-01.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">南北通 · Georgia Tech delivery</div>
+      <div class="gallery-item-caption" data-i18n="gc-del-01">南北通 · Georgia Tech delivery</div>
     </div>
     <div class="gallery-item" data-caption="Delivery · unboxed" onclick="openLightbox(this)">
       <img src="photos/delivery-02.jpg" alt="Delivery unboxed">
       <div class="gallery-item-ph"><div class="ph-cn">盒</div><div class="ph-label">Delivery<br>delivery-02.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Delivery · unboxed</div>
+      <div class="gallery-item-caption" data-i18n="gc-del-02">Delivery · unboxed</div>
     </div>
     <div class="gallery-item" data-caption="杨国福麻辣烫 delivery" onclick="openLightbox(this)">
       <img src="photos/delivery-03.jpg" alt="Malatang delivery">
       <div class="gallery-item-ph"><div class="ph-cn">烫</div><div class="ph-label">杨国福<br>delivery-03.jpg</div></div>
       <div class="gallery-item-overlay"></div>
-      <div class="gallery-item-caption">Delivery · dropped-off</div>
+      <div class="gallery-item-caption" data-i18n="gc-del-03">Delivery · dropped-off</div>
     </div>
 
   </div><!-- /gallery-grid -->
@@ -403,8 +403,8 @@
 <!-- DIVIDER -->
 <div class="dq reveal">
   <div class="dq-cn">客</div>
-  <div class="dq-text">"I ordered 夫妻肺片 and they added 麻酱. It's a small thing. But the kind of wrong that accumulates."</div>
-  <div class="dq-cite">Ithaca · 6 years in the US</div>
+  <div class="dq-text" data-i18n="dq3-text">"I ordered 夫妻肺片 and they added 麻酱. It's a small thing. But the kind of wrong that accumulates."</div>
+  <div class="dq-cite" data-i18n="dq3-cite">Ithaca · 6 years in the US</div>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -412,22 +412,22 @@
 ══════════════════════════════════════ -->
 <section id="tensions" data-chapter="Five Tensions">
   <div class="tensions-inner">
-    <div class="eyebrow reveal">What the food is really saying</div>
-    <div class="t-section-title reveal rd1">Five Tensions</div>
-    <div class="t-section-sub reveal rd2">These are not just eating habits. They are five recurring arguments conducted entirely through what ends up on a plate.</div>
-    <div class="eight-sub reveal rd2">Click to explore.</div>
+    <div class="eyebrow reveal" data-i18n="eyebrow-tensions">What the food is really saying</div>
+    <div class="t-section-title reveal rd1" data-i18n="t-section-title">Five Tensions</div>
+    <div class="t-section-sub reveal rd2" data-i18n="t-section-sub">These are not just eating habits. They are five recurring arguments conducted entirely through what ends up on a plate.</div>
+    <div class="eight-sub reveal rd2" data-i18n="eight-sub">Click to explore.</div>
 
     <div class="tension-row reveal" onclick="toggleT(this)">
       <div class="t-num">01 <span class="t-arrow">›</span></div>
       <div class="t-body">
-        <div class="t-title">Gut Memory</div>
-        <div class="t-teaser">No one misses "Chinese food." They miss a specific fish, a specific vendor, a specific hour of day.</div>
+        <div class="t-title" data-i18n="t1-title">Gut Memory</div>
+        <div class="t-teaser" data-i18n="t1-teaser">No one misses "Chinese food." They miss a specific fish, a specific vendor, a specific hour of day.</div>
         <div class="t-expand"><div class="t-expand-inner">
-          <div class="te-body">This is not nostalgia. This is the body carrying a spatial and sensory record that no substitute can overwrite. The dish missed is always particular. The grief is always particular. The person in Los Angeles doesn't miss Chinese food — they miss freshwater river fish, the fat of the 鲢鱼头. The person in Ithaca doesn't miss Sichuan food — they miss a specific flavor profile so precisely defined that they can identify a single wrong ingredient in a bowl of 夫妻肺片.</div>
+          <div class="te-body" data-i18n-html="t1-body">This is not nostalgia. This is the body carrying a spatial and sensory record that no substitute can overwrite. The dish missed is always particular. The grief is always particular. The person in Los Angeles doesn't miss Chinese food — they miss freshwater river fish, the fat of the 鲢鱼头. The person in Ithaca doesn't miss Sichuan food — they miss a specific flavor profile so precisely defined that they can identify a single wrong ingredient in a bowl of 夫妻肺片.</div>
           <div class="te-voices">
-            <div class="te-voice"><span class="who">Los Angeles · 5 years</span><span class="txt">The fish here — tilapia, sea bass — it tastes completely different from the river fish back home. <span class="cn">豆腐鱼、鲢鱼头</span> — I miss them so much. The ingredient itself doesn't exist here.</span></div>
-            <div class="te-voice"><span class="who">Ithaca · 6 years</span><span class="txt">I ordered <span class="cn">夫妻肺片</span> and they added <span class="cn">麻酱</span>. That's wrong. It's a small thing. But the kind of wrong that accumulates.</span></div>
-            <div class="te-voice"><span class="who">Charlottesville · 5 years</span><span class="txt">I've had <span class="cn">凉皮</span> here. It's good. But it's not the <span class="cn">凉皮</span> I had on the street in Xi'an. I can't explain why. It just isn't.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t1-v1-who">Los Angeles · 5 years</span><span class="txt" data-i18n-html="t1-v1-txt">The fish here — tilapia, sea bass — it tastes completely different from the river fish back home. <span class="cn">豆腐鱼、鲢鱼头</span> — I miss them so much. The ingredient itself doesn't exist here.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t1-v2-who">Ithaca · 6 years</span><span class="txt" data-i18n-html="t1-v2-txt">I ordered <span class="cn">夫妻肺片</span> and they added <span class="cn">麻酱</span>. That's wrong. It's a small thing. But the kind of wrong that accumulates.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t1-v3-who">Charlottesville · 5 years</span><span class="txt" data-i18n-html="t1-v3-txt">I've had <span class="cn">凉皮</span> here. It's good. But it's not the <span class="cn">凉皮</span> I had on the street in Xi'an. I can't explain why. It just isn't.</span></div>
           </div>
         </div></div>
       </div>
@@ -436,13 +436,13 @@
     <div class="tension-row reveal" onclick="toggleT(this)">
       <div class="t-num">02 <span class="t-arrow">›</span></div>
       <div class="t-body">
-        <div class="t-title">The Kitchen as the Stable Room</div>
-        <div class="t-teaser">When everything else shifts, the stove follows a logic that is entirely your own.</div>
+        <div class="t-title" data-i18n="t2-title">The Kitchen as the Stable Room</div>
+        <div class="t-teaser" data-i18n="t2-teaser">When everything else shifts, the stove follows a logic that is entirely your own.</div>
         <div class="t-expand"><div class="t-expand-inner">
-          <div class="te-body">Six of eight people cook regularly. But the way they describe cooking reveals it is rarely just about efficiency. It is methodical, deliberate, often solitary — and deeply orienting. One person in Atlanta cooks every single meal. Another describes the precise sequence of heating oil, charring peppercorns, removing them before they burn. A third cooks to "recalibrate" after eating 白人饭. The kitchen is the one place in America where the logic is entirely their own.</div>
+          <div class="te-body" data-i18n-html="t2-body">Six of eight people cook regularly. But the way they describe cooking reveals it is rarely just about efficiency. It is methodical, deliberate, often solitary — and deeply orienting. One person in Atlanta cooks every single meal. Another describes the precise sequence of heating oil, charring peppercorns, removing them before they burn. A third cooks to "recalibrate" after eating 白人饭. The kitchen is the one place in America where the logic is entirely their own.</div>
           <div class="te-voices">
-            <div class="te-voice"><span class="who">Atlanta · 2 years</span><span class="txt">When I've been eating <span class="cn">白人饭</span> for too long, I come home and cook. It's like recalibrating. Bringing myself back.</span></div>
-            <div class="te-voice"><span class="who">Atlanta · 5 years</span><span class="txt">Heat the oil. Add the <span class="cn">花椒</span>. Wait until fragrant. Take them out before they turn black. Then the <span class="cn">杏鲍菇</span>. A little soy sauce. That's it.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t2-v1-who">Atlanta · 2 years</span><span class="txt" data-i18n-html="t2-v1-txt">When I've been eating <span class="cn">白人饭</span> for too long, I come home and cook. It's like recalibrating. Bringing myself back.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t2-v2-who">Atlanta · 5 years</span><span class="txt" data-i18n-html="t2-v2-txt">Heat the oil. Add the <span class="cn">花椒</span>. Wait until fragrant. Take them out before they turn black. Then the <span class="cn">杏鲍菇</span>. A little soy sauce. That's it.</span></div>
           </div>
         </div></div>
       </div>
@@ -451,13 +451,13 @@
     <div class="tension-row reveal" onclick="toggleT(this)">
       <div class="t-num">03 <span class="t-arrow">›</span></div>
       <div class="t-body">
-        <div class="t-title">The Alone–Together Paradox</div>
-        <div class="t-teaser">Group delivery chats. Solo desk meals. Community assembles around the logistics of hunger, then disperses to eat alone.</div>
+        <div class="t-title" data-i18n="t3-title">The Alone–Together Paradox</div>
+        <div class="t-teaser" data-i18n="t3-teaser">Group delivery chats. Solo desk meals. Community assembles around the logistics of hunger, then disperses to eat alone.</div>
         <div class="t-expand"><div class="t-expand-inner">
-          <div class="te-body">The delivery group chats — <span style="font-family:'Noto Serif SC',serif;color:var(--gold)">南北通</span>, campus WeChat groups with hundreds of members — create a strange new form of community. The act of ordering is collective; the act of eating is almost always alone. This is not a failure of community. It is a new shape of it — one that only makes sense in diaspora, where belonging is provisional and mealtimes are uncoupled from togetherness.</div>
+          <div class="te-body" data-i18n-html="t3-body">The delivery group chats — <span style="font-family:'Noto Serif SC',serif;color:var(--gold)">南北通</span>, campus WeChat groups with hundreds of members — create a strange new form of community. The act of ordering is collective; the act of eating is almost always alone. This is not a failure of community. It is a new shape of it — one that only makes sense in diaspora, where belonging is provisional and mealtimes are uncoupled from togetherness.</div>
           <div class="te-voices">
-            <div class="te-voice"><span class="who">Charlottesville · 5 years</span><span class="txt">If I order takeout alone, I can only get one dish. But one dish isn't enough variety. And two is too much food. The math of eating alone never works out.</span></div>
-            <div class="te-voice"><span class="who">Ithaca · 6 years</span><span class="txt">Every Friday, a few of us would cook together. Each person made one dish. That was the happiest meal of the week — not because the food was great, but because we were all there.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t3-v1-who">Charlottesville · 5 years</span><span class="txt" data-i18n="t3-v1-txt">If I order takeout alone, I can only get one dish. But one dish isn't enough variety. And two is too much food. The math of eating alone never works out.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t3-v2-who">Ithaca · 6 years</span><span class="txt" data-i18n="t3-v2-txt">Every Friday, a few of us would cook together. Each person made one dish. That was the happiest meal of the week — not because the food was great, but because we were all there.</span></div>
           </div>
         </div></div>
       </div>
@@ -466,13 +466,13 @@
     <div class="tension-row reveal" onclick="toggleT(this)">
       <div class="t-num">04 <span class="t-arrow">›</span></div>
       <div class="t-body">
-        <div class="t-title">Resistance &amp; Resignation</div>
-        <div class="t-teaser">They know the broth isn't the same. They order anyway. That "anyway" carries everything.</div>
+        <div class="t-title" data-i18n="t4-title">Resistance &amp; Resignation</div>
+        <div class="t-teaser" data-i18n="t4-teaser">They know the broth isn't the same. They order anyway. That "anyway" carries everything.</div>
         <div class="t-expand"><div class="t-expand-inner">
-          <div class="te-body">Every choice to eat Chinese food in America is simultaneously an act of cultural insistence and an acceptance of imperfect translation. The students know the fish will be different, the spice will be wrong. They order anyway. In that "anyway" lives the refusal to let the category disappear, even when the specific thing within it cannot be fully recovered. The person in Los Angeles who saw bacon cooked in the hot pot for the first time — stunned, then gradually accepting, then eventually joyful — that arc is the entire experience of living between worlds.</div>
+          <div class="te-body" data-i18n-html="t4-body">Every choice to eat Chinese food in America is simultaneously an act of cultural insistence and an acceptance of imperfect translation. The students know the fish will be different, the spice will be wrong. They order anyway. In that "anyway" lives the refusal to let the category disappear, even when the specific thing within it cannot be fully recovered. The person in Los Angeles who saw bacon cooked in the hot pot for the first time — stunned, then gradually accepting, then eventually joyful — that arc is the entire experience of living between worlds.</div>
           <div class="te-voices">
-            <div class="te-voice"><span class="who">Los Angeles · 5 years</span><span class="txt">The first time I saw someone cook bacon in the hot pot, I was stunned. I'm Sichuan — I'd never seen that. But slowly I got used to it. And honestly? Eating together like that was the happiest thing.</span></div>
-            <div class="te-voice"><span class="who">Atlanta · 9 years</span><span class="txt">I've spent half my life here. But my tastes haven't changed. I don't think they will. That part of me just stayed.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t4-v1-who">Los Angeles · 5 years</span><span class="txt" data-i18n="t4-v1-txt">The first time I saw someone cook bacon in the hot pot, I was stunned. I'm Sichuan — I'd never seen that. But slowly I got used to it. And honestly? Eating together like that was the happiest thing.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t4-v2-who">Atlanta · 9 years</span><span class="txt" data-i18n="t4-v2-txt">I've spent half my life here. But my tastes haven't changed. I don't think they will. That part of me just stayed.</span></div>
           </div>
         </div></div>
       </div>
@@ -481,13 +481,13 @@
     <div class="tension-row reveal" onclick="toggleT(this)">
       <div class="t-num">05 <span class="t-arrow">›</span></div>
       <div class="t-body">
-        <div class="t-title">Absence as Dislocation</div>
-        <div class="t-teaser">Without familiar food, one person feels like a guest all day. Food is the mechanism for arriving.</div>
+        <div class="t-title" data-i18n="t5-title">Absence as Dislocation</div>
+        <div class="t-teaser" data-i18n="t5-teaser">Without familiar food, one person feels like a guest all day. Food is the mechanism for arriving.</div>
         <div class="t-expand"><div class="t-expand-inner">
-          <div class="te-body">One person in Atlanta describes it most precisely: on days when they cannot eat the food they're used to, they feel like a guest — all day, everywhere, even in their own apartment. The word is 做客 — being a guest in someone else's home. The absence of familiar food doesn't just create hunger. It creates a background noise of unbelonging that makes every other task slightly harder. Food is not just fuel. It is the most reliable mechanism for arriving.</div>
+          <div class="te-body" data-i18n-html="t5-body">One person in Atlanta describes it most precisely: on days when they cannot eat the food they're used to, they feel like a guest — all day, everywhere, even in their own apartment. The word is 做客 — being a guest in someone else's home. The absence of familiar food doesn't just create hunger. It creates a background noise of unbelonging that makes every other task slightly harder. Food is not just fuel. It is the most reliable mechanism for arriving.</div>
           <div class="te-voices">
-            <div class="te-voice"><span class="who">Atlanta · 5 years</span><span class="txt">If I haven't eaten something I actually like that day, I feel like a guest the whole day. No moment of coming home and relaxing. That process — eating — is what puts me at ease.</span></div>
-            <div class="te-voice"><span class="who">Atlanta · 1 year</span><span class="txt">Every time I eat Chinese food, I miss home a little. But I also feel like I've come back to something.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t5-v1-who">Atlanta · 5 years</span><span class="txt" data-i18n="t5-v1-txt">If I haven't eaten something I actually like that day, I feel like a guest the whole day. No moment of coming home and relaxing. That process — eating — is what puts me at ease.</span></div>
+            <div class="te-voice"><span class="who" data-i18n="t5-v2-who">Atlanta · 1 year</span><span class="txt" data-i18n="t5-v2-txt">Every time I eat Chinese food, I miss home a little. But I also feel like I've come back to something.</span></div>
           </div>
         </div></div>
       </div>
@@ -499,8 +499,8 @@
 <!-- DIVIDER -->
 <div class="dq reveal">
   <div class="dq-cn">调</div>
-  <div class="dq-text">"When I've been eating 白人饭 too long, I cook. It's like recalibrating. And if I can recreate a taste from home — that's something to be proud of."</div>
-  <div class="dq-cite">Atlanta · 2 years in the US</div>
+  <div class="dq-text" data-i18n="dq4-text">"When I've been eating 白人饭 too long, I cook. It's like recalibrating. And if I can recreate a taste from home — that's something to be proud of."</div>
+  <div class="dq-cite" data-i18n="dq4-cite">Atlanta · 2 years in the US</div>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -508,24 +508,24 @@
 ══════════════════════════════════════ -->
 <section id="data" data-chapter="Patterns">
   <div class="data-inner">
-    <div class="eyebrow reveal">By the Numbers</div>
-    <div class="eight-title reveal rd1" style="font-size:clamp(22px,3.5vw,40px);color:var(--paper);margin-bottom:12px;">Patterns Across Eight</div>
-    <div class="eight-sub reveal rd2" style="font-size:24px;font-style:italic;color:var(--muted);margin-bottom:72px;max-width:500px;">What the numbers say — and what they don't.</div>
+    <div class="eyebrow reveal" data-i18n="eyebrow-data">By the Numbers</div>
+    <div class="eight-title reveal rd1" style="font-size:clamp(22px,3.5vw,40px);color:var(--paper);margin-bottom:12px;" data-i18n="data-title">Patterns Across Eight</div>
+    <div class="eight-sub reveal rd2" style="font-size:24px;font-style:italic;color:var(--muted);margin-bottom:72px;max-width:500px;" data-i18n="data-sub">What the numbers say — and what they don't.</div>
 
     <div class="data-grid reveal">
-      <div class="d-cell"><div class="d-n">8</div><div class="d-l">students across 7 universities</div></div>
-      <div class="d-cell"><div class="d-n">5.1</div><div class="d-l">average years living in the US</div></div>
-      <div class="d-cell"><div class="d-n">~70%</div><div class="d-l">of weekly meals identified as Chinese</div></div>
-      <div class="d-cell"><div class="d-n">6/8</div><div class="d-l">cook Chinese food themselves regularly</div></div>
-      <div class="d-cell"><div class="d-n">5/8</div><div class="d-l">cite Sichuan / spicy as primary preference</div></div>
-      <div class="d-cell"><div class="d-n">100%</div><div class="d-l">name Chinese food as their preferred cuisine</div></div>
+      <div class="d-cell"><div class="d-n">8</div><div class="d-l" data-i18n="d-l-1">students across 7 universities</div></div>
+      <div class="d-cell"><div class="d-n">5.1</div><div class="d-l" data-i18n="d-l-2">average years living in the US</div></div>
+      <div class="d-cell"><div class="d-n">~70%</div><div class="d-l" data-i18n="d-l-3">of weekly meals identified as Chinese</div></div>
+      <div class="d-cell"><div class="d-n">6/8</div><div class="d-l" data-i18n="d-l-4">cook Chinese food themselves regularly</div></div>
+      <div class="d-cell"><div class="d-n">5/8</div><div class="d-l" data-i18n="d-l-5">cite Sichuan / spicy as primary preference</div></div>
+      <div class="d-cell"><div class="d-n">100%</div><div class="d-l" data-i18n="d-l-6">name Chinese food as their preferred cuisine</div></div>
     </div>
 
     <div class="reveal">
-      <div class="bars-hd">Proportion of weekly meals identified as Chinese — sorted by years in the US</div>
+      <div class="bars-hd" data-i18n="bars-hd">Proportion of weekly meals identified as Chinese — sorted by years in the US</div>
       <div id="bars-wrap">
         <div class="bar-row" data-pct="100"><div class="bar-id"><span>Atlanta</span><span class="bdisp">潮汕牛肉煲</span></div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-pct">100%</div></div>
-        <div class="bar-note">1 year in the US, happens to be have had the most recent international transition</div>
+        <div class="bar-note" data-i18n="bar-note-1">1 year in the US, happens to be have had the most recent international transition</div>
         <div class="bar-row" data-pct="85"><div class="bar-id"><span>Ithaca</span><span class="bdisp">夫妻肺片</span></div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-pct">85%</div></div>
         <div class="bar-row" data-pct="82"><div class="bar-id"><span>Atlanta</span><span class="bdisp">臭桂鱼</span></div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-pct">82%</div></div>
         <div class="bar-row" data-pct="75"><div class="bar-id"><span>Los Angeles</span><span class="bdisp">肥肠豆腐鱼</span></div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-pct">75%</div></div>
@@ -533,19 +533,19 @@
         <div class="bar-row" data-pct="48"><div class="bar-id"><span>Boston</span><span class="bdisp">糖醋排骨</span></div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-pct">48%</div></div>
         <div class="bar-row" data-pct="47"><div class="bar-id"><span>Atlanta</span><span class="bdisp">辣子鸡</span></div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-pct">47%</div></div>
         <div class="bar-row" data-pct="33"><div class="bar-id"><span>Atlanta</span><span class="bdisp">兰州拉面</span></div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-pct">33%</div></div>
-        <div class="bar-note">9 years in the US — preference unchanged, proportion normalized</div>
+        <div class="bar-note" data-i18n="bar-note-2">9 years in the US — preference unchanged, proportion normalized</div>
       </div>
-      <div style="margin-top:20px;font-size:13px;font-style:italic;color:var(--muted);line-height:1.7;max-width:680px;">The range — 33% to 100% — tells the story of time. The person who has been here one year holds on most tightly. The person who has been here nine years has normalized. Neither is more or less Chinese than the other. They are at different points in the same negotiation.</div>
+      <div style="margin-top:20px;font-size:13px;font-style:italic;color:var(--muted);line-height:1.7;max-width:680px;" data-i18n="bars-footnote">The range — 33% to 100% — tells the story of time. The person who has been here one year holds on most tightly. The person who has been here nine years has normalized. Neither is more or less Chinese than the other. They are at different points in the same negotiation.</div>
     </div>
 
     <div class="reveal" style="margin-top:64px;">
-      <div class="bars-hd" style="margin-top:0">Geography &amp; Access</div>
-      <div style="font-size:14px;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:20px;">Where you live shapes how you eat. Access is not uniform.</div>
+      <div class="bars-hd" style="margin-top:0" data-i18n="geo-hd">Geography &amp; Access</div>
+      <div style="font-size:14px;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:20px;" data-i18n="geo-sub">Where you live shapes how you eat. Access is not uniform.</div>
       <div class="geo-list">
-        <div class="geo-item"><div class="geo-city">Los Angeles</div><div class="geo-desc">1 person · 5 years</div><div class="geo-note">"华人区不远。" Delivery services feel unnecessary. The city does the work.</div></div>
-        <div class="geo-item"><div class="geo-city">Atlanta</div><div class="geo-desc">4 people · 1–9 years</div><div class="geo-note">Moderate access. 南北通 and campus delivery exist but are used selectively. Cooking dominates.</div></div>
-        <div class="geo-item"><div class="geo-city">Boston</div><div class="geo-desc">1 person · 5 years</div><div class="geo-note">Campus delivery used briefly, then abandoned. "It wasn't that good anyway."</div></div>
-        <div class="geo-item"><div class="geo-city">Ithaca &amp; Charlottesville</div><div class="geo-desc">2 people · 5–6 years</div><div class="geo-note">Small cities, scarce access. Ithaca: $23 a box. Minnesota (before Charlottesville): 痛苦 — real suffering. Geography as deprivation.</div></div>
+        <div class="geo-item"><div class="geo-city">Los Angeles</div><div class="geo-desc" data-i18n="geo-la-desc">1 person · 5 years</div><div class="geo-note" data-i18n="geo-la-note">"华人区不远。" Delivery services feel unnecessary. The city does the work.</div></div>
+        <div class="geo-item"><div class="geo-city">Atlanta</div><div class="geo-desc" data-i18n="geo-atl-desc">4 people · 1–9 years</div><div class="geo-note" data-i18n="geo-atl-note">Moderate access. 南北通 and campus delivery exist but are used selectively. Cooking dominates.</div></div>
+        <div class="geo-item"><div class="geo-city">Boston</div><div class="geo-desc" data-i18n="geo-la-desc">1 person · 5 years</div><div class="geo-note" data-i18n="geo-bos-note">Campus delivery used briefly, then abandoned. "It wasn't that good anyway."</div></div>
+        <div class="geo-item"><div class="geo-city">Ithaca &amp; Charlottesville</div><div class="geo-desc" data-i18n="geo-ith-cville-desc">2 people · 5–6 years</div><div class="geo-note" data-i18n="geo-ith-cville-note">Small cities, scarce access. Ithaca: $23 a box. Minnesota (before Charlottesville): 痛苦 — real suffering. Geography as deprivation.</div></div>
       </div>
     </div>
   </div>
@@ -556,12 +556,12 @@
 ══════════════════════════════════════ -->
 <section id="paradox" data-chapter="The Argument">
   <div class="paradox-inner">
-    <div class="eyebrow reveal" style="justify-content:center">Central Argument</div>
+    <div class="eyebrow reveal" style="justify-content:center" data-i18n="eyebrow-paradox">Central Argument</div>
     <div class="paradox-cn reveal rd1">独<span class="para-slash">/</span>众</div>
-    <div class="para-pull reveal rd2"><em>Alone.</em> Together. Not a contradiction —<br>an accurate description.</div>
+    <div class="para-pull reveal rd2" data-i18n-html="para-pull"><em>Alone.</em> Together. Not a contradiction —<br>an accurate description.</div>
     <div class="para-body reveal rd3">
-      <p>The delivery group chats have hundreds of members. The coordination is collective. The eating is almost always solo. This new form — communal logistics, solitary consumption — is specific to diaspora and to this generation: enabled by WeChat, shaped by the economics of ordering alone.</p>
-      <p>But the deeper paradox is this: the choice to eat Chinese food in America is simultaneously an act of cultural resistance and an act of resignation. Resistance, because it refuses to passively accept dining hall food as cultural neutrality. Resignation, because the food is always already a translation — the broth approximated, the vegetables substituted, the 麻酱 appearing uninvited. Students know this. Most describe a quiet grief about it — not dramatic homesickness, but a low hum of incompleteness that surfaces most acutely at mealtimes.</p>
+      <p data-i18n="para-body-1">The delivery group chats have hundreds of members. The coordination is collective. The eating is almost always solo. This new form — communal logistics, solitary consumption — is specific to diaspora and to this generation: enabled by WeChat, shaped by the economics of ordering alone.</p>
+      <p data-i18n="para-body-2">But the deeper paradox is this: the choice to eat Chinese food in America is simultaneously an act of cultural resistance and an act of resignation. Resistance, because it refuses to passively accept dining hall food as cultural neutrality. Resignation, because the food is always already a translation — the broth approximated, the vegetables substituted, the 麻酱 appearing uninvited. Students know this. Most describe a quiet grief about it — not dramatic homesickness, but a low hum of incompleteness that surfaces most acutely at mealtimes.</p>
     </div>
     <div class="para-vs reveal">
       <div class="vs-side"><div class="vs-lbl">What is collective</div><div class="vs-txt">Group delivery chats. Shared WeChat orders with hundreds of members. Communal cooking on Friday nights. The social architecture of <em>obtaining</em> Chinese food together.</div></div>
@@ -569,7 +569,7 @@
       <div class="vs-side"><div class="vs-lbl">What is solitary</div><div class="vs-txt">Eating at a desk. One portion, alone. The structural awkwardness of ordering for one. The private kitchen of memory, closed to everyone else.</div></div>
     </div>
     <div class="para-body reveal">
-      <p>The person in Ithaca's Friday communal cooking stands as the counter-image: what it looks like when logistics and eating collapse into a single moment. The happiest meal of the week. Not because the food was great. Because everyone was there.</p>
+      <p data-i18n="para-body-3">The person in Ithaca's Friday communal cooking stands as the counter-image: what it looks like when logistics and eating collapse into a single moment. The happiest meal of the week. Not because the food was great. Because everyone was there.</p>
     </div>
   </div>
 </section>
@@ -579,14 +579,12 @@
 ══════════════════════════════════════ -->
 <section id="closing" data-chapter="家">
   <div class="closing-inner">
-    <div class="closing-eyebrow reveal">A Final Word</div>
+    <div class="closing-eyebrow reveal" data-i18n="closing-eyebrow">A Final Word</div>
     <div class="closing-cn reveal rd1">家</div>
     <div class="closing-rule reveal rd2"></div>
-    <div class="closing-body reveal rd3">Eight students. Five years average in the US. Seventy percent of meals still Chinese. <em>Not because they cannot eat otherwise.</em> Because the body, given the choice, reaches for what it knows. That reaching is not weakness. It is the most honest account any of these students can give of who they are — conducted not through language, not through ceremony, but through the daily, private, necessary act of eating.</div>
+    <div class="closing-body reveal rd3" data-i18n-html="closing-body">Eight students. Five years average in the US. Seventy percent of meals still Chinese. <em>Not because they cannot eat otherwise.</em> Because the body, given the choice, reaches for what it knows. That reaching is not weakness. It is the most honest account any of these students can give of who they are — conducted not through language, not through ceremony, but through the daily, private, necessary act of eating.</div>
     <div class="credits reveal">
-      "Eating Alone Together" — Photo Documentary &amp; Oral Archive<br>
-      8 interviews · 8 kitchens · ~20 photographs · 7 universities · 5 states<br>
-      Chinese international students in the United States · 2024–2025
+      <span data-i18n-html="credits">"Eating Alone Together" — Photo Documentary &amp; Oral Archive<br>8 interviews · 8 kitchens · ~20 photographs · 7 universities · 5 states<br>Chinese international students in the United States · 2024–2025</span>
     </div>
   </div>
 </section>
@@ -598,17 +596,17 @@
   <div class="listen-inner">
 
     <div class="listen-top reveal">
-      <div class="eyebrow">完整版纪录片</div>
-      <div class="listen-title">听完整的故事</div>
-      <div class="listen-sub">十五分钟。八个声音。一部完整的声音纪录片。我还需要一些时间，请期待！</div>
+      <div class="eyebrow" data-i18n="listen-eyebrow">完整版纪录片</div>
+      <div class="listen-title" data-i18n="listen-title">听完整的故事</div>
+      <div class="listen-sub" data-i18n="listen-sub">十五分钟。八个声音。一部完整的声音纪录片。我还需要一些时间，请期待！</div>
     </div>
 
     <!-- Full documentary play block -->
     <div class="listen-player reveal rd1">
       <div class="lp-left">
-        <div class="lp-label">Documentary Audio</div>
-        <div class="lp-track-title">《吃》— Eating Alone Together</div>
-        <div class="lp-track-sub">完整版 · ~15 min · Mandarin</div>
+        <div class="lp-label" data-i18n="lp-label">Documentary Audio</div>
+        <div class="lp-track-title" data-i18n="lp-track-title">《吃》— Eating Alone Together</div>
+        <div class="lp-track-sub" data-i18n="lp-track-sub">完整版 · ~15 min · Mandarin</div>
         <div class="lp-waveform" id="full-waveform">
           <span></span><span></span><span></span><span></span><span></span>
           <span></span><span></span><span></span><span></span><span></span>
@@ -625,7 +623,7 @@
             <polygon points="5,3 19,12 5,21"/>
           </svg>
         </button>
-        <div class="lp-play-label" id="full-play-label">播放</div>
+        <div class="lp-play-label" id="full-play-label" data-i18n="lp-play-label">播放</div>
       </div>
     </div>
 
@@ -641,7 +639,7 @@
         </svg>
       </div>
       <div class="xy-text">
-        <div class="xy-label">届时请由此前往小宇宙收听</div>
+        <div class="xy-label" data-i18n="xy-label">届时请由此前往小宇宙收听</div>
         <div class="xy-sub">xiaoyuzhoufm.com</div>
       </div>
       <div class="xy-arrow">→</div>
@@ -663,6 +661,10 @@
   <div id="lightbox-caption"></div>
 </div>
 
+<script src="js/lang.js"></script>
 <script src="js/main.js"></script>
+
+<!-- ── LANGUAGE TOGGLE ── -->
+<button id="lang-toggle-btn" onclick="toggleLang()" title="Switch language / 切换语言">中文</button>
 </body>
 </html>
